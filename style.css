@@ -172,3 +172,100 @@ body {
     box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
     transform: scale(1.05); /* Membuat tombol sedikit membesar saat hover */
 }
+
+/* ================= KODE TAMBAHAN UNTUK FITUR CHECKLIST ADMIN & BLOKIR ================= */
+/* Tombol Akses Admin Rahasia di Pojok Kanan Bawah */
+#secretadminBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+/* Modal Panel Kontrol Kontainer (Pop-up Pop-up Tengah) */
+.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Membuat latar belakang agak gelap */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Kotak Putih Isi Checklist Di Dalam Pop-up */
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 450px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto; /* Bisa di-scroll ke bawah kalau HP layarnya kecil */
+    position: relative;
+    color: #333;
+}
+
+/* Tombol Silang (X) Untuk Menutup Pop-up */
+.close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 28px; cursor: pointer;
+}
+
+/* Desain Baris Tiap Checklist Kotak */
+.kontrol-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Tombol Simpan ke Cloud Database */
+.btn-save {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Layar Blokir Hitam Fullscreen 404 */
+.layar-blokir {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: #1a1a1a;
+    color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.konten-blokir h1 {
+    font-size: 100px; margin: 0; color: #ef4444;
+}
+
+.btn-kembali {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
